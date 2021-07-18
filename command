@@ -15,3 +15,14 @@ docker-compose run composer create-project laravel/laravel .
 
 #APOS INSTALACAO REINICIAR O docker
 docker-compose up -d
+
+#CONFIGURANDO A CONEXAO COM O MYSQL 
+DB_CONNECTION=mysql 
+DB_HOST=mysql # faz referencia ao mysql do docker
+DB_PORT=3306
+DB_DATABASE=db_laravel_tenancy # nome banco de dados configurado no docker-composer
+DB_USERNAME=root # user do banco de dados configurado no docker-composer
+DB_PASSWORD=root # senha do banco de dados configurado no docker-composer
+
+#RODANDO MIGRATE NO docker
+docker-compose run artisan migrate
