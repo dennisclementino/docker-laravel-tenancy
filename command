@@ -26,3 +26,19 @@ DB_PASSWORD=root # senha do banco de dados configurado no docker-composer
 
 #RODANDO MIGRATE NO docker
 docker-compose run artisan migrate
+
+#END CONFIGURACOES ------
+
+#BIBLIOTECAS ADICIONAIS
+
+#INSTALANDO O O LIVEWIRE
+docker-compose run composer require livewire/livewire laravel-frontend-presets/tall
+
+#INSTALANDO O AUTH (AUTENTICACAO)
+docker-compose run artisan ui tall --auth
+
+#NPM INSTAL 
+docker-compose run npm install
+
+#NPM DEV
+docker-compose run npm dev  
